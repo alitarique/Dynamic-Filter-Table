@@ -1,6 +1,6 @@
 let savedFilterModel = null;
   
-function clearFilter() {
+/*function clearFilter() {
   gridApi.setColumnFilterModel("AKASH LCN", null)
   .then(() => {
     gridApi.onFilterChanged();
@@ -45,8 +45,12 @@ function clearFilter() {
   .then(() => {
     gridApi.onFilterChanged();
   });
-}
+}*/
 
+// reset button
+function clearFilter(){ 
+  gridApi.setFilterModel(null);
+}
 function saveFilterModel() {
   savedFilterModel = gridApi.getColumnFilterModel("athlete");
 
