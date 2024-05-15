@@ -137,7 +137,7 @@ var dateFilterParams = {
     gridApi = agGrid.createGrid(gridDiv, gridOptions);
   
     // fetch("https://www.ag-grid.com/example-assets/olympic-winners.json")
-    fetch("/Data/testData.json")
+    fetch("https://alitarique.github.io/Dynamic-Filter-Table/Data/testData.json")
     // fetch("D:/web development/Xampp/htdocs/php applications/Dynamic Filter Templet/Custom/Data/testData.json")
       .then((response) => response.json())
       .then((data) => gridApi.setGridOption("rowData", data),
@@ -156,7 +156,7 @@ async function readJSONFile(url) {
 
 
 async function rowCount() {
-    const jsonData = await readJSONFile('/Data/testData.json');
+    const jsonData = await readJSONFile('https://alitarique.github.io/Dynamic-Filter-Table/Data/testData.json');
     console.log(jsonData);
     // gridApi.setGridOption("rowData", jsonData);
     let services = jsonData.length;
