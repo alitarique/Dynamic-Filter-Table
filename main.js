@@ -88,7 +88,7 @@ var dateFilterParams = {
   const gridOptions = {
     columnDefs: [
       // { field: "athlete", filter: "agMultiColumnFilter" },
-      { field: "AKASH LCN", filter: "agMultiColumnFilter", pinned: 'left', maxWidth:125 },
+      { field: "AKASH LCN", filter: "agMultiColumnFilter", pinned: 'left', maxWidth:125, checkboxSelection: true },
       { field: "TATA SKY LCN", filter: "agMultiColumnFilter", pinned: 'left', maxWidth:140 },
       { field: "UCS LCN", filter: "agMultiColumnFilter", pinned: 'left', maxWidth:110 },
       { field: "CHANNEL NAME", filter: "agMultiColumnFilter", pinned: 'left', maxWidth:160 },
@@ -109,7 +109,10 @@ var dateFilterParams = {
       { field: "A PID 2", filter: "agMultiColumnFilter" },
       
     ],
+    rowSelection: "single",
     defaultColDef: {
+      // rowData: null,
+      editable: false,
       flex: 1,
       minWidth: 200,
       menuTabs: ["filterMenuTab"],
@@ -134,7 +137,7 @@ var dateFilterParams = {
     gridApi = agGrid.createGrid(gridDiv, gridOptions);
   
     // fetch("https://www.ag-grid.com/example-assets/olympic-winners.json")
-    fetch("https://alitarique.github.io/Dynamic-Filter-Table/Data/testData.json")
+    fetch("/Data/testData.json")
     // fetch("D:/web development/Xampp/htdocs/php applications/Dynamic Filter Templet/Custom/Data/testData.json")
       .then((response) => response.json())
       .then((data) => gridApi.setGridOption("rowData", data),
@@ -153,7 +156,7 @@ async function readJSONFile(url) {
 
 
 async function rowCount() {
-    const jsonData = await readJSONFile('https://alitarique.github.io/Dynamic-Filter-Table/Data/testData.json');
+    const jsonData = await readJSONFile('/Data/testData.json');
     console.log(jsonData);
     // gridApi.setGridOption("rowData", jsonData);
     let services = jsonData.length;
@@ -163,7 +166,3 @@ async function rowCount() {
     // Work with the JSON data here
 }
 rowCount();
-
-
-  
-  
