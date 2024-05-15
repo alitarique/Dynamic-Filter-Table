@@ -1,0 +1,7 @@
+.ag-theme-quartz {
+      --ag-header-background-color: rgb(17, 187, 230); 
+    --ag-odd-row-background-color: rgba(12, 181, 187, 0.4);
+    /* --ag-header-column-resize-handle-color: rgb(26, 8, 128); */
+    --ag-selected-row-background-color: rgba(251, 255, 4, 0.945);
+
+}
