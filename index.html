@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>JavaScript Example - Filter Multi - Multi Filter</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <!-- <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;700&amp;display=swap"
+      rel="stylesheet"
+    /> -->
+    <link rel="stylesheet" href="/CSS/googleapi.css">
+    <!-- <style></style> -->
+    <link rel="stylesheet" href="CSS/style.css">
+    <style media="only screen">
+      :root,
+      body {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        box-sizing: border-box;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      html {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 0;
+        overflow: auto;
+        font-family: -apple-system, "system-ui", "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+          "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+          "Noto Color Emoji";
+      }
+
+      body {
+        padding: 16px;
+        overflow: auto;
+        background-color: transparent;
+      }
+
+      /* Hide codesandbox highlighter */
+      body > #highlighter {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- buttons -->
+    <div class="example-wrapper">
+      <div>
+        <div class="button-group">
+          <button onclick="saveFilterModel()">Save Filter Model</button>
+          <button onclick="restoreFilterModel()">
+            Restore Saved Filter Model
+          </button>
+          <button
+            onclick="restoreFromHardCoded()"
+            title="Name = 'Mich%', Country = ['Ireland', 'United States'], Age &lt; 30, Date &lt; 01/01/2010"
+          >
+            Set Custom Filter Model
+          </button>
+          <button onclick="clearFilter()">Reset Filter</button>
+        </div>
+      </div>
+      <div>
+        <div class="button-group">
+          Saved Filters: <span id="savedFilters">(none)</span>
+        </div>
+        </div>
+      </div>
+    <!-- row count -->
+    <div style="align-items: end">
+      Number of services = <span id="currentRowCount"></span>
+    </div>
+    <div id="myGrid" class="ag-theme-quartz" style="height: 100%"></div>
+    <script>
+      (function () {
+        const appLocation = "";
+
+        window.__basePath = appLocation;
+      })();
+    </script>
+    <script src="mainFilter.js"></script>
+    <script src="button.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/ag-grid-charts-enterprise@31.3.1/dist/ag-grid-charts-enterprise.js?t=1714474813810"></script> -->
+    <script src="main.js"></script>
+    <!-- <script src="jsonTest.js"></script> -->
+  </body>
+</html>
